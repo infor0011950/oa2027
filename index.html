@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Oferta Académica 2027 | Colegio Eucarístico Mercedario</title>
+
+<link rel="stylesheet" href="css/estilos.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+
+:root{
+--vino:#7A1022;
+--azul:#0B2341;
+--oro:#D4A017;
+--gris:#f5f6f8;
+--texto:#333333;
+--blanco:#ffffff;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Open Sans',sans-serif;
+color:var(--texto);
+line-height:1.7;
+background:white;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+section{
+padding:80px 0;
+}
+
+h1,h2,h3,h4{
+font-family:'Montserrat',sans-serif;
+}
+
+img{
+max-width:100%;
+display:block;
+}
+
+/* ==========================
+MENU
+========================== */
+
+nav{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+background:rgba(11,35,65,.97);
+backdrop-filter:blur(8px);
+z-index:999;
+}
+
+.nav-container{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 0;
+}
+
+.logo-nav{
+color:white;
+font-weight:700;
+font-size:1rem;
+}
+
+.menu{
+display:flex;
+gap:25px;
+}
+
+.menu a{
+color:white;
+text-decoration:none;
+font-weight:600;
+transition:.3s;
+}
+
+.menu a:hover{
+color:var(--oro);
+}
+
+/* ==========================
+HERO
+========================== */
+
+.hero{
+min-height:100vh;
+background:
+linear-gradient(
+135deg,
+var(--azul) 0%,
+var(--vino) 100%
+);
+display:flex;
+align-items:center;
+padding-top:100px;
+color:white;
+}
+
+.hero-content{
+text-align:center;
+}
+
+.logos{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:60px;
+margin-bottom:30px;
+flex-wrap:wrap;
+}
+
+.logo-escudo{
+height:180px;
+width:auto;
+}
+
+.logo-centenario{
+height:180px;
+width:auto;
+}
+
+.hero h1{
+font-size:3rem;
+font-weight:800;
+margin-bottom:15px;
+}
+
+.hero h2{
+font-size:1.5rem;
+color:var(--oro);
+margin-bottom:20px;
+}
+
+.lema{
+font-size:1.2rem;
+max-width:900px;
+margin:auto;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:var(--oro);
+color:var(--azul);
+font-weight:700;
+text-decoration:none;
+border-radius:50px;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+/* ==========================
+CENTENARIO
+========================== */
+
+.centenario{
+background:var(--oro);
+text-align:center;
+color:var(--azul);
+}
+
+.centenario h2{
+font-size:3rem;
+}
+
+.centenario p{
+font-size:1.3rem;
+font-weight:700;
+}
+
+/* ==========================
+TITULOS
+========================== */
+
+.section-title{
+text-align:center;
+margin-bottom:50px;
+color:var(--vino);
+font-size:2.2rem;
+}
+
+/* ==========================
+CARDS
+========================== */
+
+.grid-2{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.card h3{
+color:var(--azul);
+margin-bottom:15px;
+}
+
+/* ==========================
+POR QUE ELEGIRNOS
+========================== */
+
+.features{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.feature{
+background:white;
+padding:25px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+font-weight:700;
+}
+
+/* ==========================
+OFERTA
+========================== */
+
+.oferta{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+gap:25px;
+}
+
+.oferta-card{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+border-top:6px solid var(--oro);
+}
+
+.oferta-card h3{
+color:var(--vino);
+margin-bottom:15px;
+}
+
+.oferta-card ul{
+padding-left:20px;
+}
+
+/* ==========================
+INSTALACIONES
+========================== */
+
+.instalaciones{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+}
+
+.inst-item{
+background:var(--gris);
+padding:20px;
+border-radius:15px;
+font-weight:700;
+text-align:center;
+}
+
+/* ==========================
+TABLAS
+========================== */
+
+.table-responsive{
+overflow-x:auto;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+margin-top:20px;
+}
+
+th{
+background:var(--azul);
+color:white;
+}
+
+th,td{
+padding:14px;
+border:1px solid #ddd;
+text-align:center;
+}
+
+tr:nth-child(even){
+background:#fafafa;
+}
+
+/* ==========================
+TIMELINE
+========================== */
+
+.timeline{
+max-width:900px;
+margin:auto;
+}
+
+.step{
+background:white;
+padding:25px;
+margin-bottom:20px;
+border-left:6px solid var(--vino);
+border-radius:12px;
+box-shadow:0 5px 15px rgba(0,0,0,.05);
+}
+
+/* ==========================
+CONTACTO
+========================== */
+
+.contacto{
+background:var(--azul);
+color:white;
+}
+
+.contact-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.contact-card{
+background:rgba(255,255,255,.08);
+padding:25px;
+border-radius:15px;
+text-align:center;
+}
+
+.contact-card a{
+color:var(--oro);
+text-decoration:none;
+}
+
+/* ==========================
+AVISO
+========================== */
+
+.aviso{
+background:var(--oro);
+padding:35px;
+border-radius:20px;
+text-align:center;
+font-weight:700;
+}
+
+/* ==========================
+FOOTER
+========================== */
+
+footer{
+background:var(--vino);
+color:white;
+text-align:center;
+padding:30px 20px;
+}
+
+/* ==========================
+WHATSAPP
+========================== */
+
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+width:60px;
+height:60px;
+border-radius:50%;
+background:#25D366;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+text-decoration:none;
+z-index:999;
+}
+
+/* ==========================
+MOBILE
+========================== */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:2rem;
+}
+
+.hero h2{
+font-size:1.2rem;
+}
+
+.logo-escudo,
+.logo-centenario{
+height:120px;
+}
+
+.menu{
+display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+<div class="container">
+
+<div class="logo-nav">
+CEM 2027
+</div>
+
+<button class="hamburger" id="hamburger">
+☰
+</button>
+
+<ul class="menu" id="menu">
+<li><a href="#inicio">Inicio</a></li>
+<li><a href="#nosotros">Nosotros</a></li>
+<li><a href="#proyecto">Proyecto</a></li>
+<li><a href="#oferta">Oferta</a></li>
+<li><a href="#instalaciones">Instalaciones</a></li>
+<li><a href="#horarios">Horarios</a></li>
+<li><a href="#colegiaturas">Colegiaturas</a></li>
+<li><a href="#admision">Admisión</a></li>
+<li><a href="#contacto">Contacto</a></li>
+</ul>
+
+</div>
+</nav>
+
+<header class="hero" id="inicio">
+
+<div class="container">
+
+<div class="logos">
+
+<img src="escudo.png" alt="Escudo" class="logo-escudo">
+
+
+
+</div>
+
+<h1 align="center">COLEGIO EUCARÍSTICO MERCEDARIO</h1>
+<div align="center"><br>
+  
+    <img src="logocentenario.png" alt="Centenario" class="logo-centenario">
+</div>
+<p class="lema">
+"Cien años en El Salvador formando Eucarísticos Mercedarios de corazón"
+</p>
+
+<h2>OFERTA ACADÉMICA 2027</h2>
+
+<a href="#admision" class="btn">
+ADMISIONES 2027
+</a>
+
+</div>
+
+</header>
+
+<section class="centenario reveal">
+
+<h2>1927 – 2027</h2>
+
+<p>
+100 AÑOS FORMANDO EUCARÍSTICOS MERCEDARIOS DE CORAZÓN
+</p>
+
+</section>
+
+<section id="nosotros" class="reveal">
+
+<div class="container">
+
+<h2 class="section-title">¿Quiénes Somos?</h2>
+
+<div class="grid-2">
+
+<div class="card">
+
+<h3>MISIÓN</h3>
+
+<p>
+El Colegio Eucarístico Mercedario es una Institución católica, que tiene como centro a Jesús Sacramentado; como modelo a María de la Merced. Ofrecemos a niños, niñas y jóvenes una educación integral en un ambiente de familia de acuerdo al Carisma Eucarístico Mercedario, para que sean valientes, resilientes, capaces de afrontar las dificultades y contribuir en la transformación de una sociedad justa, libre, igualitaria y pacífica.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>VISIÓN</h3>
+
+<p>
+Ser una Institución Educativa líder que forme integralmente a los niños, niñas y jóvenes, con una educación de excelencia académica, humana, científica y tecnológica constituyéndose en una comunidad en continuo aprendizaje, motivada y comprometida con el espíritu Eucarístico Mercedario.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="proyecto" class="gris reveal">
+
+<div class="container">
+
+<h2 class="section-title">Proyecto Educativo</h2>
+
+<div class="features">
+
+<div class="feature">✝ Educación en la fe</div>
+<div class="feature">❤ Formación en valores</div>
+<div class="feature">💻 Informática e inglés en todos los niveles</div>
+<div class="feature">🤖 Robótica en todos los niveles</div>
+<div class="feature">📚 Aula virtual y aulas físicas con tecnología</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="oferta" class="reveal">
+
+<div class="container">
+
+<h2 class="section-title">Oferta Académica 2027</h2>
+
+<div class="oferta">
+
+<div class="oferta-card">
+<h3>Parvularia Bilingüe</h3>
+<ul>
+<li>Parvularia 4 años</li>
+<li>Parvularia 5 años</li>
+<li>Parvularia 6 años (Preparatoria)</li>
+</ul>
+</div>
+
+<div class="oferta-card">
+<h3>Educación Básica</h3>
+<ul>
+<li>Primer ciclo (1° a 3° grado bilingüe)</li>
+<li>Segundo ciclo (4° a 6° grado)</li>
+<li>Tercer ciclo (7° a 9° grado)</li>
+</ul>
+</div>
+
+<div class="oferta-card">
+<h3>Bachillerato</h3>
+<ul>
+<li>Bachillerato General</li>
+<li>Diplomado en Inglés Turístico</li>
+<li>Diplomado en Informática y Diseño Gráfico</li>
+<li>Diplomado en Salud y Atención Primaria</li>
+<li>Bachillerato Técnico Opción Contador</li>
+</ul>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="instalaciones" class="gris reveal">
+
+<div class="container">
+
+<h2 class="section-title">Contamos con</h2>
+
+<div class="instalaciones">
+
+<div>📚 Biblioteca</div>
+<div>💻 Centro de Cómputo</div>
+<div>🤖 Laboratorio de Robótica</div>
+<div>🧪 Laboratorio de Ciencias</div>
+<div>⛪ Capilla</div>
+<div>🏀 Cancha Techada</div>
+<div>🌳 Amplias zonas verdes</div>
+<div>🏫 Amplios salones de clase</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="horarios" class="reveal">
+
+<div class="container">
+
+<h2 class="section-title">Horarios de Clase</h2>
+
+<table>
+<tr>
+<th>Nivel</th>
+<th>Horario</th>
+</tr>
+
+<tr>
+<td>Parvularia</td>
+<td>7:00 a.m. - 12:00 p.m.</td>
+</tr>
+
+<tr>
+<td>Educación Básica</td>
+<td>6:45 a.m. - 12:40 p.m.</td>
+</tr>
+
+<tr>
+<td>Bachillerato</td>
+<td>6:45 a.m. - 3:30 p.m.</td>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+<section id="colegiaturas" class="gris reveal">
+
+<div class="container">
+
+<h2 class="section-title">Colegiaturas 2027</h2>
+
+<p class="centrado">
+Se cancelarán 11 mensualidades de enero a noviembre
+</p>
+
+<table>
+
+<tr>
+<th>Nivel</th>
+<th>Costo de Matrícula</th>
+<th>Colegiatura</th>
+</tr>
+
+<tr><td>Parvularia bilingüe</td><td>$99</td><td>$47</td></tr>
+<tr><td>Primer Grado bilingüe</td><td>$112</td><td>$53</td></tr>
+<tr><td>Segundo Grado bilingüe</td><td>$112</td><td>$53</td></tr>
+<tr><td>Tercer Grado bilingüe</td><td>$112</td><td>$53</td></tr>
+<tr><td>Cuarto Grado</td><td>$114</td><td>$45</td></tr>
+<tr><td>Quinto Grado</td><td>$115</td><td>$45</td></tr>
+<tr><td>Sexto Grado</td><td>$114</td><td>$45</td></tr>
+<tr><td>Tercer ciclo</td><td>$127</td><td>$49</td></tr>
+<tr><td>Bachillerato general</td><td>$129</td><td>$59</td></tr>
+<tr><td>Bachillerato técnico</td><td>$129</td><td>$62</td></tr>
+</table>
+
+</div>
+
+</section>
+
+<section id="admision" class="reveal">
+
+<div class="container">
+
+<h2 class="section-title">Proceso de Admisión para Estudiantes de Nuevo Ingreso 2027</h2>
+
+<div class="timeline">
+
+<div class="step">
+<h3>1. Documentación Básica</h3>
+
+<p>
+Los padres de familia deberán presentar:
+</p>
+
+<ul>
+<li>Partida de nacimiento reciente del estudiante (máximo 3 meses de emisión).</li>
+<li>Copia de DUI de los padres o responsable.</li>
+<li>Copia de fe de bautismo.</li>
+<li>Registro de notas del primer o segundo trimestre actualizado según formato de la institución de procedencia.</li>
+<li>Certificado del año anterior.</li>
+<li>Constancia de buena conducta.</li>
+<li>Solvencia de pago de la institución de donde procede.</li>
+</ul>
+
+<p>
+<strong>Nota:</strong> Para Parvularia, únicamente si ha realizado estudios previos deberá presentar constancia de notas y certificado.
+</p>
+
+<p>
+La documentación deberá enviarse electrónicamente (escaneada o fotografía legible) al menos seis días antes del examen de admisión al correo:
+<br><br>
+<strong>nuevoingreso2026@colegioeucaristicomercedario.edu.sv</strong>
+<br><br>
+o al WhatsApp:
+<strong>7883-5145</strong>
+</p>
+
+</div>
+
+<div class="step">
+
+<h3>2. Pago de Examen de Admisión</h3>
+
+<p>
+Deberá cancelar <strong>$16.00</strong> correspondientes al derecho de examen de admisión.
+</p>
+
+<p>
+Puede realizar el depósito en la siguiente cuenta:
+</p>
+
+<p>
+<strong>Asociación Mercedaria del Santísimo Sacramento</strong><br>
+Cuenta No. <strong>002510139053</strong><br>
+<strong>Banco Davivienda</strong>
+</p>
+
+<p>
+Posteriormente deberá enviar una fotografía o imagen legible del comprobante de pago al WhatsApp:
+<strong>7883-5145</strong>
+</p>
+
+</div>
+
+<div class="step">
+
+<h3>3. Examen de Admisión</h3>
+
+<p>
+El examen se realizará de forma presencial.
+</p>
+
+<p>
+Una vez cancelado el derecho de examen, se enviarán al correo personal del aspirante los contenidos que serán evaluados.
+</p>
+
+</div>
+
+<div class="step">
+
+<h3>4. Fechas de Exámenes de Admisión</h3>
+
+<p>
+<strong>Educación Parvularia y Primer Grado</strong><br>
+Jueves 20 de agosto
+</p>
+
+<p>
+<strong>Educación Básica (2° a 9° grado) y Bachillerato</strong><br>
+Viernes 21 de agosto
+</p>
+
+</div>
+
+<div class="step">
+
+<h3>5. Exámenes a Realizar</h3>
+
+<p>
+Evaluación Cognitiva en las siguientes áreas:
+</p>
+
+<ul>
+<li>Matemática</li>
+<li>Lenguaje</li>
+<li>Inglés (para Tercer Ciclo y Bachillerato)</li>
+</ul>
+
+</div>
+
+<div class="step">
+
+<h3>6. Informe de Resultados del Examen de Admisión</h3>
+
+<p>
+Los resultados serán comunicados oportunamente a los padres de familia o responsables mediante los canales institucionales establecidos por el colegio.
+</p>
+
+</div>
+
+<div class="step">
+
+<h3>7. Matrícula</h3>
+
+<p>
+Los estudiantes que hayan completado satisfactoriamente el proceso de admisión podrán realizar su matrícula en las fechas establecidas por la institución.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="reveal">
+
+<div class="container">
+
+<div class="aviso">
+
+<h2>Nota Importante</h2>
+
+<p>
+El Colegio Eucarístico Mercedario es un colegio <strong>CATÓLICO</strong>.
+</p>
+
+<p>
+No discrimina por razón de raza, sexo, origen, credo o condición social.
+</p>
+
+<p>
+La institución se rige por los <strong>Principios y Valores Cristianos</strong> propios de su identidad educativa y del Carisma Eucarístico Mercedario.
+</p>
+
+<p>
+Quienes aspiren a formar parte de la Familia Eucarística Mercedaria, tanto padres de familia como estudiantes, deben considerar y asumir responsablemente el tipo de educación integral, humana, espiritual y académica que ofrece la institución.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section id="contacto" class="contacto">
+
+<div class="container">
+
+<h2>Contacto</h2>
+
+<div class="contact-grid">
+
+<div class="contact-card">
+📧<br>
+nuevoingreso2026@colegioeucaristicomercedario.edu.sv
+</div>
+
+<div class="contact-card">
+📱<br>
+7883-5145
+</div>
+
+<div class="contact-card">
+🏦<br>
+Cuenta Davivienda<br>
+002510139053
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<footer>
+ADMISIONES 2027 · COLEGIO EUCARÍSTICO MERCEDARIO · TODOS LOS DERECHOS RESERVADOS 2026
+</footer>
+
+<a href="https://wa.me/50378835145" class="whatsapp">💬</a>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
