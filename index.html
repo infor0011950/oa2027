@@ -11,6 +11,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 <style>
 
 :root{
@@ -120,7 +121,13 @@ color:white;
 }
 
 .hero-content{
-text-align:center;
+    text-align:center;
+}
+
+.hero h1,
+.hero h2,
+.hero p{
+    text-align:center;
 }
 
 .logos{
@@ -155,21 +162,23 @@ margin-bottom:20px;
 }
 
 .lema{
-font-size:1.2rem;
-max-width:900px;
-margin:auto;
-margin-bottom:30px;
+    font-size:1.2rem;
+    max-width:900px;
+    margin:auto;
+    margin-bottom:30px;
+    text-align:center;argin-bottom:30px;
 }
 
 .btn{
-display:inline-block;
-padding:15px 35px;
-background:var(--oro);
-color:var(--azul);
-font-weight:700;
-text-decoration:none;
-border-radius:50px;
-transition:.3s;
+    display:inline-block;
+    padding:15px 35px;
+    background:var(--oro);
+    color:var(--azul);
+    font-weight:700;
+    text-decoration:none;
+    border-radius:50px;
+    transition:.3s;
+    margin:0 auto;
 }
 
 .btn:hover{
@@ -217,7 +226,7 @@ gap:30px;
 }
 
 .card{
-background:white;
+background:khaki;
 padding:30px;
 border-radius:20px;
 box-shadow:0 10px 30px rgba(0,0,0,.08);
@@ -239,7 +248,7 @@ gap:20px;
 }
 
 .feature{
-background:white;
+background:LightYellow;
 padding:25px;
 border-radius:15px;
 text-align:center;
@@ -247,6 +256,17 @@ box-shadow:0 5px 15px rgba(0,0,0,.08);
 font-weight:700;
 }
 
+.features .feature:last-child{
+    grid-column: 1 / -1;
+    justify-self: center;
+    max-width: 350px;
+}
+
+.icono-corazon{
+    color:#C00000;
+    font-size:1.3rem;
+    margin-right:8px;
+}
 /* ==========================
 OFERTA
 ========================== */
@@ -258,7 +278,7 @@ gap:25px;
 }
 
 .oferta-card{
-background:white;
+background:LightGoldenrodYellow;
 padding:30px;
 border-radius:20px;
 box-shadow:0 10px 30px rgba(0,0,0,.08);
@@ -432,6 +452,14 @@ height:120px;
 display:none;
 }
 
+
+
+.fa-whatsapp{
+    color:#25D366;
+}
+
+
+
 }
 
 </style>
@@ -439,31 +467,6 @@ display:none;
 
 <body>
 
-<nav class="navbar">
-<div class="container">
-
-<div class="logo-nav">
-CEM 2027
-</div>
-
-<button class="hamburger" id="hamburger">
-☰
-</button>
-
-<ul class="menu" id="menu">
-<li><a href="#inicio">Inicio</a></li>
-<li><a href="#nosotros">Nosotros</a></li>
-<li><a href="#proyecto">Proyecto</a></li>
-<li><a href="#oferta">Oferta</a></li>
-<li><a href="#instalaciones">Instalaciones</a></li>
-<li><a href="#horarios">Horarios</a></li>
-<li><a href="#colegiaturas">Colegiaturas</a></li>
-<li><a href="#admision">Admisión</a></li>
-<li><a href="#contacto">Contacto</a></li>
-</ul>
-
-</div>
-</nav>
 
 <header class="hero" id="inicio">
 
@@ -484,27 +487,15 @@ CEM 2027
 </div>
 <p class="lema">
 "Cien años en El Salvador formando Eucarísticos Mercedarios de corazón"
-</p>
+</p><strong></strong>
 
-<h2>OFERTA ACADÉMICA 2027</h2>
+<h1>OFERTA ACADÉMICA 2027</h1>
 
-<a href="#admision" class="btn">
-ADMISIONES 2027
-</a>
 
 </div>
 
 </header>
 
-<section class="centenario reveal">
-
-<h2>1927 – 2027</h2>
-
-<p>
-100 AÑOS FORMANDO EUCARÍSTICOS MERCEDARIOS DE CORAZÓN
-</p>
-
-</section>
 
 <section id="nosotros" class="reveal">
 
@@ -528,10 +519,8 @@ El Colegio Eucarístico Mercedario es una Institución católica, que tiene como
 
 <h3>VISIÓN</h3>
 
-<p>
-Ser una Institución Educativa líder que forme integralmente a los niños, niñas y jóvenes, con una educación de excelencia académica, humana, científica y tecnológica constituyéndose en una comunidad en continuo aprendizaje, motivada y comprometida con el espíritu Eucarístico Mercedario.
-</p>
-
+<p><strong>
+Ser una Institución Educativa líder que forme integralmente a los niños, niñas y jóvenes, con una educación de excelencia académica, humana, científica y tecnológica constituyéndose en una comunidad en continuo aprendizaje, motivada y comprometida con el espíritu Eucarístico Mercedario.</strong></p>
 </div>
 
 </div>
@@ -549,7 +538,7 @@ Ser una Institución Educativa líder que forme integralmente a los niños, niñ
 <div class="features">
 
 <div class="feature">✝ Educación en la fe</div>
-<div class="feature">❤ Formación en valores</div>
+<div class="feature"> <span class="icono-corazon">♥</span> Formación en valores</div>
 <div class="feature">💻 Informática e inglés en todos los niveles</div>
 <div class="feature">🤖 Robótica en todos los niveles</div>
 <div class="feature">📚 Aula virtual y aulas físicas con tecnología</div>
@@ -611,13 +600,13 @@ Ser una Institución Educativa líder que forme integralmente a los niños, niñ
 
 <div class="instalaciones">
 
-<div>📚 Biblioteca</div>
+<div>🏫 Amplias instalaciones</div>
 <div>💻 Centro de Cómputo</div>
 <div>🤖 Laboratorio de Robótica</div>
 <div>🧪 Laboratorio de Ciencias</div>
 <div>⛪ Capilla</div>
 <div>🏀 Cancha Techada</div>
-<div>🌳 Amplias zonas verdes</div>
+<div>🌳 Múltiples zonas verdes</div>
 <div>🏫 Amplios salones de clase</div>
 
 </div>
@@ -725,7 +714,7 @@ Los padres de familia deberán presentar:
 <p>
 La documentación deberá enviarse electrónicamente (escaneada o fotografía legible) al menos seis días antes del examen de admisión al correo:
 <br><br>
-<strong>nuevoingreso2026@colegioeucaristicomercedario.edu.sv</strong>
+<strong>nuevoingreso2027@colegioeucaristicomercedario.edu.sv</strong>
 <br><br>
 o al WhatsApp:
 <strong>7883-5145</strong>
@@ -870,19 +859,14 @@ Quienes aspiren a formar parte de la Familia Eucarística Mercedaria, tanto padr
 <div class="contact-grid">
 
 <div class="contact-card">
-📧<br>
-nuevoingreso2026@colegioeucaristicomercedario.edu.sv
+📧 Correo electrónico<br>
+nuevoingreso2027@colegioeucaristicomercedario.edu.sv
 </div>
 
 <div class="contact-card">
-📱<br>
+<i class="fab fa-whatsapp"></i> WhatsApp
+<br>
 7883-5145
-</div>
-
-<div class="contact-card">
-🏦<br>
-Cuenta Davivienda<br>
-002510139053
 </div>
 
 </div>
@@ -895,9 +879,8 @@ Cuenta Davivienda<br>
 ADMISIONES 2027 · COLEGIO EUCARÍSTICO MERCEDARIO · TODOS LOS DERECHOS RESERVADOS 2026
 </footer>
 
-<a href="https://wa.me/50378835145" class="whatsapp">💬</a>
 
-<script src="js/script.js"></script>
+
 
 </body>
 </html>
